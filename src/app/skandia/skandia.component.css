@@ -1,0 +1,12 @@
+.card {
+  border: none;
+}
+
+.badge {
+  font-size: 0.95rem;
+  padding: 0.5em 1em;
+}
+
+.bg-success-subtle {
+  background-color: #d4edda; 
+}
