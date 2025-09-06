@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
-import { SkandiaComponent } from './skandia/skandia.component';
+import { SkandiaComponent } from './pages/skandia/skandia.component';
 
 
 @Component({
