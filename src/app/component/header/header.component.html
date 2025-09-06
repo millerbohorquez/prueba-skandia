@@ -1,9 +1,15 @@
 <header class="navbar navbar-expand-lg bg-white border-bottom px-3">
   <div class="container-fluid d-flex justify-content-between align-items-center">
-    
+
     <!-- Menú hamburguesa -->
-    <button class="btn btn-link text-success fs-4 p-0 me-3">
-      <i class="fas fa-bars"></i>
+    <button class="btn btn-link text-success fs-4 p-0 me-3" (click)="toggleSidebar()">
+      <!-- si está abierto muestra X, si no, hamburguesa -->
+      <ng-container *ngIf="(open$ | async); else burger">
+        <i class="fas fa-times"></i>
+      </ng-container>
+      <ng-template #burger>
+        <i class="fas fa-bars"></i>
+      </ng-template>
     </button>
 
     <!-- Logo y título -->

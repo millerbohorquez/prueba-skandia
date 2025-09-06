@@ -1,0 +1,43 @@
+/* overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1000;
+}
+
+/* sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px; /* oculto por defecto */
+  width: 280px;
+  height: 100%;
+  background: #eaeaea;
+  transition: left 0.28s ease;
+  padding-top: 60px; /* deja espacio para el header */
+  z-index: 1001;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+
+/* al activarse */
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul li {
+  padding: 14px 20px;
+}
+
+.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li a:hover {
+  background: #00b140;
+  color: #fff;
+  border-radius: 4px;
+}

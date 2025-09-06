@@ -1,0 +1,14 @@
+<!-- overlay -->
+<div class="overlay" *ngIf="(open$ | async)" (click)="close()"></div>
+
+<!-- sidebar -->
+<nav class="sidebar" [class.active]="(open$ | async)">
+  <ul class="list-unstyled m-0">
+    <li><a routerLink="/home" (click)="close()"><i class="fas fa-home me-2"></i> Inicio</a></li>
+    <li><a routerLink="/contratos" (click)="close()"><i class="fas fa-file-alt me-2"></i> Contratos</a></li>
+    <li><a routerLink="/acciones" (click)="close()"><i class="fas fa-chart-line me-2"></i> Acciones</a></li>
+    <li><a routerLink="/objetivos" (click)="close()"><i class="fas fa-star me-2"></i> Objetivos</a></li>
+    <li><a routerLink="/herramientas" (click)="close()"><i class="fas fa-tools me-2"></i> Herramientas</a></li>
+    <li><a routerLink="/servicio" (click)="close()"><i class="fas fa-headset me-2"></i> Servicio al cliente</a></li>
+  </ul>
+</nav>
