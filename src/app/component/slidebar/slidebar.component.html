@@ -1,14 +1,44 @@
-<!-- overlay -->
+<!-- overlay (solo cuando está expandido) -->
 <div class="overlay" *ngIf="(open$ | async)" (click)="close()"></div>
 
-<!-- sidebar -->
-<nav class="sidebar" [class.active]="(open$ | async)">
-  <ul class="list-unstyled m-0">
-    <li><a routerLink="/home" (click)="close()"><i class="fas fa-home me-2"></i> Inicio</a></li>
-    <li><a routerLink="/contratos" (click)="close()"><i class="fas fa-file-alt me-2"></i> Contratos</a></li>
-    <li><a routerLink="/acciones" (click)="close()"><i class="fas fa-chart-line me-2"></i> Acciones</a></li>
-    <li><a routerLink="/objetivos" (click)="close()"><i class="fas fa-star me-2"></i> Objetivos</a></li>
-    <li><a routerLink="/herramientas" (click)="close()"><i class="fas fa-tools me-2"></i> Herramientas</a></li>
-    <li><a routerLink="/servicio" (click)="close()"><i class="fas fa-headset me-2"></i> Servicio al cliente</a></li>
+<!-- sidebar: por defecto colapsado; cuando open$ === true -> expanded -->
+<nav class="sidebar" [class.expanded]="(open$ | async)">
+  <ul class="menu list-unstyled m-0">
+    <li>
+      <a routerLink="/home" (click)="close()" title="Inicio">
+        <span class="icon"><i class="fas fa-home"></i></span>
+        <span class="label">Inicio</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contratos" (click)="close()" title="Contratos">
+        <span class="icon"><i class="fas fa-file-alt"></i></span>
+        <span class="label">Contratos</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/acciones" (click)="close()" title="Acciones">
+        <span class="icon"><i class="fas fa-chart-line"></i></span>
+        <span class="label">Acciones</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/objetivos" (click)="close()" title="Objetivos">
+        <span class="icon"><i class="fas fa-star"></i></span>
+        <span class="label">Objetivos</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/herramientas" (click)="close()" title="Herramientas">
+        <span class="icon"><i class="fas fa-tools"></i></span>
+        <span class="label">Herramientas</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/servicio" (click)="close()" title="Servicio al cliente">
+        <span class="icon"><i class="fas fa-headset"></i></span>
+        <span class="label">Servicio al cliente</span>
+      </a>
+    </li>
   </ul>
 </nav>

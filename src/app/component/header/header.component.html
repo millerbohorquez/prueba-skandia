@@ -2,8 +2,8 @@
   <div class="container-fluid d-flex justify-content-between align-items-center">
 
     <!-- Menú hamburguesa -->
-    <button class="btn btn-link text-success fs-4 p-0 me-3" (click)="toggleSidebar()">
-      <!-- si está abierto muestra X, si no, hamburguesa -->
+    <button class="btn btn-link fs-4 p-0 me-3" (click)="toggleSidebar()"
+      [attr.aria-expanded]="(open$ | async)">
       <ng-container *ngIf="(open$ | async); else burger">
         <i class="fas fa-times"></i>
       </ng-container>
@@ -15,7 +15,7 @@
     <!-- Logo y título -->
     <div class="d-flex align-items-center">
       <img src="assets/logo-skandia.svg" alt="Skandia" class="me-2" style="height: 30px;">
-      <span class="fw-bold text-dark">skandia</span>
+      
       <span class="ms-2 text-muted">| Plan Financiero Digital - FPX</span>
     </div>
 

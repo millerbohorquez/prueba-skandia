@@ -1,3 +1,15 @@
+:root {
+  --header-height: 64px;
+}
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 1100;
+}
 header {
   font-size: 14px;
 }
@@ -8,6 +20,10 @@ header .fw-bold {
 
 header a:hover {
   text-decoration: underline;
+}
+
+.btn{
+  color: #00C83C;
 }
 
 .sidebar {
@@ -40,7 +56,7 @@ header a:hover {
 }
 
 .sidebar ul li a:hover {
-  background: #00b140;
+  background: #00C83C;
   color: #fff;
   border-radius: 4px;
 }

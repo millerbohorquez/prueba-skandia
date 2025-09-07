@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './slidebar.component.css'
 })
 export class SlidebarComponent {
-open$: Observable<boolean>;
+ open$: Observable<boolean>;
 
   constructor(private sidebar: SlidebarService) {
     this.open$ = this.sidebar.open$;

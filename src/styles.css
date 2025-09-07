@@ -1,4 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --header-height: 64px;                /* altura del header (ajusta si necesitas) */
+  --sidebar-width-collapsed: 72px;
+  --sidebar-width-expanded: 280px;
+  --transition: 220ms ease;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Header fijado arriba */
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  z-index: 1100;
+}
+
+/* Asegura que el body no tenga scroll oculto por el header */
+body {
+  padding-top: var(--header-height);
+}
