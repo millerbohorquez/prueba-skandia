@@ -7,10 +7,10 @@
   overflow: hidden;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease;
   display: flex;
-  flex-direction: column;   /* Para alinear contenido vertical */
-  justify-content: space-between; /* Para empujar info-box abajo */
-  min-height: 450px;        /* 📌 altura mínima */
-  max-height: 450px;        /* opcional: tope máximo */
+  flex-direction: column;   
+  justify-content: space-between; 
+  min-height: 450px;       
+  max-height: 450px;       
   padding: 20px;
 }
 
@@ -35,7 +35,7 @@
 
 /* checkbox top-right */
 .check-box input {
-  display: none; /* ocultamos el input */
+  display: none; 
 }
 
 .check-box .square {
@@ -48,7 +48,7 @@
   transition: all 0.2s ease;
 }
 
-/* cuando el input está checkeado, el cuadro se pinta verde */
+/* cuando el input está checkeado*/
 .check-box input:checked + .square {
   background-color: #00b140;
   border-color: #00b140;
@@ -73,7 +73,7 @@
   padding: 12px;
   font-size: 0.9rem;
   line-height: 1.3;
-  margin-top: auto; /* 📌 siempre pegada abajo */
+  margin-top: auto; 
 }
 
 /* icono pequeño */
@@ -100,14 +100,14 @@
   align-items: center;
 }
 
-/* viewport: recorta y define ancho por slide con var */
+ */
 .carousel-viewport {
   overflow: hidden;
   width: 100%;
-  --slides-per-view: 3; /* default */;
+  --slides-per-view: 3; 
 }
 
-/* track: flex row, hacemos la animación con transform */
+
 .carousel-track {
   display: flex;
   gap: 24px;
@@ -117,14 +117,14 @@
   align-items: stretch;
 }
 
-/* cada slide ocupa 100% / slides-per-view */
+
 .card-slide {
   flex: 0 0 calc(100% / var(--slides-per-view));
   box-sizing: border-box;
-  min-width: 0; /* evita overflow de texto */
+  min-width: 0; 
 }
 
-/* estilos visuales card (ajusta a tu diseño) */
+/* estilos visuales */
 .card-slide .card1 {
   height: 100%;
 }
@@ -147,7 +147,7 @@
 
 .btn-explore {
   position: absolute;
-  top: 180px;   /* 📌 ajusta este valor según donde termine el texto */
+  top: 180px;   
   left: 25%;
   transform: translateX(-50%);
   background: #00b140;
@@ -186,17 +186,17 @@
 
 .slider-control:hover { background: #00C83C; color: black;}
 
-/* responsive: ajustar gaps y slides */
+/* responsive*/
 @media (max-width: 991px) {
   .carousel-track { gap: 18px; }
 }
 
 @media (max-width: 575px) {
-  .slider-control { display: none; } /* en mobile ocultar controles si quieres */
+  .slider-control { display: none; } 
   .carousel-track { gap: 12px; }
 }
 
-/* pequeñas mejoras estéticas */
+
 .balance { color: #00b140; font-weight: 700; font-size: 1.05rem; }
 .info-box { background: #f5f6f7; }
 

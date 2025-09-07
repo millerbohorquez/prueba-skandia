@@ -22,7 +22,7 @@
       <img src="assets/svg.svg" alt="">
     </button>
 
-    <!-- viewport: aquí aplicamos la variable CSS --slides -->
+    <!-- variable CSS --slides -->
     <div class="carousel-viewport" [ngStyle]="{'--slides-per-view': slidesPerView}">
       <div class="carousel-track" [style.--translate]="translatePercent + '%'">
         <div class="card-slide" *ngFor="let card of cards">
@@ -48,17 +48,17 @@
               <p class="mb-1 small text-muted">{{ card.detaildProduct }}</p>
             </div>
           </div>
-        </div> <!-- /card-slide -->
+        </div> 
         <div class="card-slide">
           <div class="special-card">
             <button class="btn-explore">EXPLORA AHORA</button>
           </div>
         </div>
-      </div> <!-- /carousel-track -->
-    </div> <!-- /viewport -->
+      </div>
+    </div> 
 
 
-    <!-- next -->
+   
     <button class="slider-control next" (click)="next()" [disabled]="isNextDisabled()" aria-label="Siguiente">
       <img src="assets/svg.png" alt="">
     </button>

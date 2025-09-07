@@ -1,7 +1,7 @@
 :root {
   --sidebar-width-collapsed: 72px;
   --sidebar-width-expanded: 280px;
-  --header-height: 64px; /* ajusta si tu header tiene otra altura */
+  --header-height: 64px; 
   --sidebar-bg: #f4f5f6;
   --sidebar-text: #222;
   --transition: 220ms ease;
@@ -10,19 +10,19 @@
 /* Sidebar colapsado por defecto */
 .sidebar {
   position: fixed;
-  top: var(--header-height);                        /* <<< importante */
+  top: var(--header-height);                       
   left: 0;
-  height: calc(100% - var(--header-height));        /* no cubre la zona del header */
+  height: calc(100% - var(--header-height));        
   width: var(--sidebar-width-collapsed);
   background: var(--sidebar-bg, #EDEDED);
   overflow: hidden;
-  z-index: 1001;                                    /* menos que header (1100) */
+  z-index: 1001;                                    
   transition: width var(--transition), transform var(--transition);
   padding-top: 10px;
   box-shadow: 2px 0 8px rgba(0,0,0,0.06);
 }
 
-/* Expanded */
+
 .sidebar.expanded {
   width: var(--sidebar-width-expanded);
 }
@@ -51,7 +51,7 @@
   flex: 0 0 36px;
 }
 
-/* Label: oculto en collapsed, visible en expanded */
+/* Label: oculto en collapsed, visible  */
 .menu li a .label {
   white-space: nowrap;
   overflow: hidden;
@@ -62,21 +62,21 @@
   padding-right: 0;
 }
 
-/* Mostrar label cuando está expanded */
+/* Mostrar label  */
 .sidebar.expanded .menu li a .label {
   max-width: 240px;
   opacity: 1;
   padding-right: 6px;
 }
 
-/* Hover */
+
 .menu li a:hover {
   background: #00C83C;
   color: #000;
 
 }
 
-/* Overlay visible solo cuando expanded */
+
 .overlay {
   position: fixed;
   top: var(--header-height);
@@ -87,7 +87,7 @@
   z-index: 1000;
 }
 
-/* Mobile: el off-canvas será completo */
+
 @media (max-width: 768px) {
   .sidebar {
     top: 0;
@@ -98,6 +98,6 @@
   .sidebar.expanded {
     transform: translateX(0);
   }
-  /* Forzamos labels visibles en mobile */
+  
   .menu li a .label { max-width: 240px; opacity: 1; }
 }
