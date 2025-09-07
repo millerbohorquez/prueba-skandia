@@ -1,59 +1,65 @@
 # PruebaSkandia
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Este proyecto es una aplicación web desarrollada en **Angular Standalone**. La arquitectura está basada en componentes reutilizables y el diseño sigue las mejores prácticas de Angular para aplicaciones modernas y escalables.
 
-## Development server
+## Características principales
 
-To start a local development server, run:
+- **Angular Standalone**: Uso de componentes standalone para una estructura más limpia y modular.
+- **Desarrollo por componentes**: Cada sección de la interfaz (header, sidebar, footer, cards, etc.) está implementada como un componente independiente.
+- **Consumo de API**: Se integra una API para obtener datos dinámicos, los cuales se muestran en tarjetas (cards) dentro de la aplicación.
+- **Estilos personalizados**: Uso de CSS y SCSS para personalización visual, además de Bootstrap y Material Icons.
+- **Responsive**: El diseño es adaptable a diferentes dispositivos y tamaños de pantalla.
+- **Organización clara**: Separación de assets, servicios, modelos y páginas.
 
-```bash
-ng serve
-```
+## Estructura de carpetas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [`src/app/component`](src/app/component): Componentes reutilizables como header, footer, sidebar y cards.
+- [`src/app/pages`](src/app/pages): Páginas principales de la aplicación (por ejemplo, Skandia).
+- [`src/app/services`](src/app/services): Servicios para la lógica de negocio y consumo de APIs (por ejemplo, `cards.service.ts` y `slidebar.service.ts`).
+- [`src/app/models`](src/app/models): Modelos TypeScript para tipado de datos (por ejemplo, `card.model.ts`).
+- [`src/assets`](src/assets): Imágenes y recursos estáticos.
+- [`src/styles.css`](src/styles.css) y [`src/custom-theme.scss`](src/custom-theme.scss): Estilos globales y temas personalizados.
 
-## Code scaffolding
+## Instalación
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Clona el repositorio y entra a la carpeta del proyecto.
+2. Instala las dependencias:
 
-```bash
-ng generate component component-name
-```
+   ```sh
+   npm install
+   ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. Inicia el servidor de desarrollo:
 
-```bash
-ng generate --help
-```
+   ```sh
+   ng serve o npm start
+   ```
 
-## Building
+4. Abre [http://localhost:4200](http://localhost:4200) en tu navegador.
 
-To build the project run:
 
-```bash
-ng build
-```
+## Componentes principales
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- [`HeaderComponent`](src/app/component/header/header.component.ts): Barra superior de navegación.
+- [`SlidebarComponent`](src/app/component/slidebar/slidebar.component.ts): Menú lateral colapsable.
+- [`FooterComponent`](src/app/component/footer/footer.component.ts): Pie de página con enlaces y redes sociales.
+- [`CardsComponent`](src/app/component/cards/cards.component.ts): Renderiza las tarjetas con datos obtenidos desde la API.
+- [`SkandiaComponent`](src/app/pages/skandia/skandia.component.ts): Página principal de ejemplo.
 
-## Running unit tests
+## Servicios
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- [`CardsService`](src/app/services/cards.service.ts): Encargado de consumir la API y mapear los datos a los modelos de tarjetas.
+- [`SlidebarService`](src/app/services/slidebar.service.ts): Controla el estado del sidebar (abierto/cerrado).
 
-```bash
-ng test
-```
+## Modelos
 
-## Running end-to-end tests
+- [`Card`](src/app/models/card.model.ts): Define la estructura de los datos de cada tarjeta.
 
-For end-to-end (e2e) testing, run:
+## Personalización de estilos
 
-```bash
-ng e2e
-```
+- [`custom-theme.scss`](src/custom-theme.scss): Temas personalizados para Angular Material.
+- [`styles.css`](src/styles.css): Variables y estilos globales.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Recursos adicionales
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli)

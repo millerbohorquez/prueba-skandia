@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+
 :root{
   --header-height: 64px;                /* altura del header (ajusta si necesitas) */
   --sidebar-width-collapsed: 72px;
@@ -5,6 +8,15 @@
   --transition: 220ms ease;
 }
 
+=======
+:root{
+  --header-height: 64px;                /* altura del header (ajusta si necesitas) */
+  --sidebar-width-collapsed: 72px;
+  --sidebar-width-expanded: 280px;
+  --transition: 220ms ease;
+}
+
+>>>>>>> 3a6db11fd64012ac57e18b10fc2475ef21de246a
 /* Header fijado arriba */
 header.navbar {
   position: fixed;
@@ -19,3 +31,8 @@ header.navbar {
 body {
   padding-top: var(--header-height);
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 3a6db11fd64012ac57e18b10fc2475ef21de246a

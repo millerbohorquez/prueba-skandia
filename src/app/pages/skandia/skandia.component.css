@@ -1,5 +1,37 @@
-.card {
+
+.cardInicio {
   border: none;
+  width: 34%;
+  position: relative;
+  background: #fff;
+  height: 300px;
+}
+
+.cardInicio .mountain-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px; /* ajusta el tamaño */
+  pointer-events: none; /* no interfiere con clics */
+}
+
+.caja {
+ width: 100%;
+ background-color: #A5D7E1;
+}
+.caja2 {
+ width: 100%;
+ background-color: #FECD72;
+}
+
+.caja3 {
+ width: 100%;
+ background-color: #95DBB7;
+}
+
+.inicio{
+  width: 85%;
+  
 }
 
 .badge {
@@ -11,12 +43,16 @@
   background-color: #00C83C; 
 }
 
+.text{
+  color: #00C83C;
+}
+
 .starry-background {
   position: relative;
   width: 100%;
   min-height: 600px;
   /* Gradiente que termina sólido */
-  background: linear-gradient(to bottom, #002b45 0%, #005e6ccc 63%, #f8f9fa 0%);
+  background: linear-gradient(to bottom, #002b45 0%, #005e6ccc 63%, transparent 60%);
   overflow: hidden;
   padding: 40px 20px;
 }

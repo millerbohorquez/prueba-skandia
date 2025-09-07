@@ -1,0 +1,72 @@
+<section class="container">
+  <h3 class="text-center fw-bold mb-4">
+    ¡Vamos por esos <span class="text-warning">$6.000.000</span> para
+    <span class="text-dark">Conocer mi sobrino!</span>
+  </h3>
+  <div class="text-center mb-4" style="gap: 10px;">
+    ¡A través de tus productos y nuestros rendimientos podremos lograrlo!<br>
+    <strong>Asocia tus productos o adquiere uno nuevo.</strong>
+    <img src="assets/FAQ2.svg" alt="">
+  </div>
+
+  <!-- loader / error -->
+  <div *ngIf="loading" class="text-center my-4">
+    <div class="spinner-border text-success" role="status"></div>
+  </div>
+  <div *ngIf="error" class="alert alert-danger text-center">{{ error }}</div>
+
+  <!-- slider -->
+  <div class="slider-wrapper" *ngIf="!loading && !error">
+    <!-- prev -->
+    <button class="slider-control prev" (click)="prev()" [disabled]="isPrevDisabled()" aria-label="Anterior">
+      <img src="assets/svg.svg" alt="">
+    </button>
+
+    <!-- viewport: aquí aplicamos la variable CSS --slides -->
+    <div class="carousel-viewport" [ngStyle]="{'--slides-per-view': slidesPerView}">
+      <div class="carousel-track" [style.--translate]="translatePercent + '%'">
+        <div class="card-slide" *ngFor="let card of cards">
+          <div class="card1 card-body rounded-3 p-4">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5 class="fw-bold mb-1">{{ card.nameProduct }}</h5>
+                <p class="text-muted small mb-2">#{{ card.numberProduct }}</p>
+              </div>
+              <div class="check-box">
+                <input type="checkbox" id="chk1">
+                <label for="chk1" class="square"></label>
+              </div>
+            </div>
+
+            <hr class="my-2">
+
+            <p class="mb-1 small text-muted">Ya cuentas con:</p>
+            <p class="balance mb-2">{{ formatCurrency(card.balanceProduct) }}</p>
+
+            <div class="info-box mt-3 p-3 rounded text-center">
+              <div class="icon-sm mb-2"><img src="assets/Happy.svg" alt=""></div>
+              <p class="mb-1 small text-muted">{{ card.detaildProduct }}</p>
+            </div>
+          </div>
+        </div> <!-- /card-slide -->
+        <div class="card-slide">
+          <div class="special-card">
+            <button class="btn-explore">EXPLORA AHORA</button>
+          </div>
+        </div>
+      </div> <!-- /carousel-track -->
+    </div> <!-- /viewport -->
+
+
+    <!-- next -->
+    <button class="slider-control next" (click)="next()" [disabled]="isNextDisabled()" aria-label="Siguiente">
+      <img src="assets/svg.png" alt="">
+    </button>
+  </div>
+
+  <!-- botón principal -->
+  <div class="text-center mt-4 ">
+    <button class="btn px-5 py-2 fw-bold mt-3 mb-5">ASOCIAR A OBJETIVO</button>
+  </div>
+
+</section>
